@@ -91,7 +91,7 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                bot.send_message(chat.id, "Hi. My Godfather just joined the group, Please behave on yourself 😒")
+                bot.send_message(chat.id, "My owner just joined! Please behave yourselves 🙏.")
                 continue
 
             # Give start information when add bot to group
@@ -101,7 +101,7 @@ def new_member(bot: Bot, update: Update):
                     "I have been added to {} with ID: <pre>{}</pre>".format(chat.title, chat.id),
                     parse_mode=ParseMode.HTML
                 )
-                bot.send_message(chat.id, "Thanks To Add,Give Some Commands Now 😃")
+                bot.send_message(chat.id, "Thank you for adding me 🙂 I'll never disappoint you master!")
 
             else:
                 # If welcome message is media, send with appropriate function
