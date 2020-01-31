@@ -21,6 +21,7 @@ def weebify(bot: Bot, update: Update, args):
   else:
     message.reply_text(string)
 
-WEEBIFY_HANDLER = CommandHandler("weebify", weebify, pass_args=True)
+
+WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, pass_args=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
