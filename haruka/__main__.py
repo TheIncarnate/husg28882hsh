@@ -142,7 +142,7 @@ Click Help button to find out more about how to use me to my full potential.\n\n
 Follow [Lucy](https://t.me/LucySupportChat) ( @LucySupportChat ) if you want to keep up with the news, updates and bot downtime!\n\n\
 Made with love by @ItsAviral\n\nWant to add me to your group? [Click here!](t.me/Lucy_Robot?startgroup=true)"
 
-    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/BrothersGang")]]
+    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/LucySupportChat")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
