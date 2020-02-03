@@ -10,8 +10,8 @@ from haruka.modules.disable import DisableAbleCommandHandler
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
 kayo_btn = "Kayo 🏴‍☠️"
-prequel_btn = "Prequel ⬅️"
-sequel_btn = "Sequel ➡️"
+prequel_btn = "Back ⬅️"
+sequel_btn = "Next ➡️"
 close_btn = "Close ❌"
 
 def getKitsu(mal):
