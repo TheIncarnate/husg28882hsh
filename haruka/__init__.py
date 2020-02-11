@@ -1,36 +1,3 @@
-import logging
-import os
-import sys
-
-import telegram.ext as tg
-
-print("haruka")
-print("Starting...")
-
-
-# enable logging
-logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO)
-
-LOGGER = logging.getLogger(__name__)
-
-# if version < 3.6, stop bot.
-#if sys.version_info[0] < 3 or sys.version_info[1] < 6:
-#    LOGGER.error("You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
-#``````````````    quit(1)
-
-ENV = bool(os.environ.get('ENV', False))
-
-if ENV:
-    TOKEN = os.environ.get('TOKEN', None)
-    try:
-        OWNER_ID = int(os.environ.get('OWNER_ID', None))
-    except ValueError:
-        raise Exception("Your OWNER_ID env variable is not a valid integer.")
-
-    MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
         SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
@@ -78,31 +45,10 @@ else:
     except ValueError:
         raise Exception("Your sudo users list does not contain valid integers.")
 
-    try:
-        SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
-    except ValueError:
-        raise Exception("Your support users list does not contain valid integers.")
-
-    try:
-        WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
-    except ValueError:
+    
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
-    WEBHOOK = Config.WEBHOOK
-    URL = Config.URL
-    PORT = Config.PORT
-    CERT_PATH = Config.CERT_PATH
-
-    DB_URI = Config.SQLALCHEMY_DATABASE_URI
-    DONATION_LINK = Config.DONATION_LINK
-    LOAD = Config.LOAD
-    NO_LOAD = Config.NO_LOAD
-    DEL_CMDS = Config.DEL_CMDS
-    STRICT_ANTISPAM = Config.STRICT_ANTISPAM
-    WORKERS = Config.WORKERS
-    BAN_STICKER = Config.BAN_STICKER
-    ALLOW_EXCL = Config.ALLOW_EXCL
-    API_WEATHER = Config.API_OPENWEATHER
+    PENWEATHER) 
 
 
 SUDO_USERS.add(OWNER_ID)
@@ -112,16 +58,3 @@ updater = tg.Updater(TOKEN, workers=WORKERS)
 dispatcher = updater.dispatcher
 
 SUDO_USERS = list(SUDO_USERS)
-WHITELIST_USERS = list(WHITELIST_USERS)
-SUPPORT_USERS = list(SUPPORT_USERS)
-
-# Load at end to ensure all prev variables have been set
-from haruka.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, GbanLockHandler
-
-# make sure the regex handler can take extra kwargs
-tg.RegexHandler = CustomRegexHandler
-
-if ALLOW_EXCL:
-    tg.CommandHandler = CustomCommandHandler
-
-tg.CommandHandler = GbanLockHandler
