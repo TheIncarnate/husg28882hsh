@@ -91,7 +91,7 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                bot.send_message(chat.id, "My owner just joined! Please behave yourselves 🙏.")
+                bot.send_message(chat.id, "Oh, You're here Genos. Lets get this moving.")
                 continue
 
             # Give start information when add bot to group
@@ -217,7 +217,7 @@ def left_member(bot: Bot, update: Update):
 
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("Its My Master")
+                update.effective_message.reply_text("Oi! Genos! He left..")
                 return
 
             # if media goodbye, use appropriate function for it
@@ -340,7 +340,7 @@ def goodbye(bot: Bot, update: Update, args: List[str]):
     elif len(args) >= 1:
         if args[0].lower() in ("on", "yes"):
             sql.set_gdbye_preference(str(chat.id), True)
-            update.effective_message.reply_text("I'll be sorry when people leave!")
+            update.effective_message.reply_text("I'll be polite!.")
 
         elif args[0].lower() in ("off", "no"):
             sql.set_gdbye_preference(str(chat.id), False)
