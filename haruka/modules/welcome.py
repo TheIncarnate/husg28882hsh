@@ -101,7 +101,7 @@ def new_member(bot: Bot, update: Update):
                      "I have been added to {} with ID: <pre>{}</pre>".format(chat.title, chat.id),
                      parse_mode=ParseMode.HTML
                   )               
-                  bot.send_message(chat.id, "Hey! Thanks For Adding Me Here :) Promote me, Then I can start working and protect you from filthy spammers.Hit /help to see available commands.")
+                  bot.send_message(chat.id, "Hey! Thanks For Adding Me Here :) Promote me, Then I can start working and protect you from filthy spammers. Hit /help to see available commands.")
 
                                             
                   continue   
