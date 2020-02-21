@@ -54,7 +54,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
             message.reply_text(tld(chat.id, "No! I'm not muting bot sudoers! That would be a pretty dumb idea."))
 
         elif is_user_admin(chatD, user_id, member=member):
-            message.reply_text(tld(chat.id, "No! I'm not muting chat administrator! That would be a pretty dumb idea."))
+            message.reply_text(tld(chat.id, "Afraid I can't stop an admin from talking! - Unless i punch them that is"))
 
         elif member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chatD.id, user_id, can_send_messages=False)
@@ -164,11 +164,11 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if is_user_admin(chat, user_id, member):
-        message.reply_text(tld(chat.id, "I really wish I could mute admins..."))
+        message.reply_text(tld(chat.id, "I really wish I could mute admins...Perhaps a Punch?"))
         return ""
 
     if user_id == bot.id:
-        message.reply_text(tld(chat.id, "I'm not gonna MUTE myself, are you crazy?"))
+        message.reply_text(tld(chat.id, "I'm not gonna MUTE myself, How high are you?"))
         return ""
 
     if not reason:
