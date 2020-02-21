@@ -229,7 +229,7 @@ def kick(bot: Bot, update: Update, args: List[str]) -> str:
 def kickme(bot: Bot, update: Update):
     user_id = update.effective_message.from_user.id
     if user_id == OWNER_ID:
-        update.effective_message.reply_text(""I WON'T BAN MY OWNER YOU IDIOT.")
+        update.effective_message.reply_text("I WON'T BAN MY OWNER YOU IDIOT.")
         return
     elif is_user_admin(update.effective_chat, user_id):
         update.effective_message.reply_text("Why would I kick an Admin? That sounds like a pretty dumb idea.")
