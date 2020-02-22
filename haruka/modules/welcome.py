@@ -140,8 +140,8 @@ def new_member(bot: Bot, update: Update):
 
                 keyboard = InlineKeyboardMarkup(keyb)
 
-                sent = send(update, res, keyboard,
-                            sql.DEFAULT_WELCOME.format(first=first_name))  # type: Optional[Message]
+             sent = send(update, res, keyboard, 
+                         random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=escape_markdown(first_name)))
 
                 #Federations Ban
                 if welcome_fed(bot, update) == True:
