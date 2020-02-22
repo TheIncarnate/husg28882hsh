@@ -6,8 +6,61 @@ from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from haruka.modules.helper_funcs.msg_types import Types
 from haruka.modules.sql import SESSION, BASE
 
-DEFAULT_WELCOME = "Hey {first}, how are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_WELCOME_MESSAGES = [
+     "Welcome, {first}. Stay awhile and listen.",
+    "Welcome, {first}. We were expecting you ( ͡° ͜ʖ ͡°)",
+    "Welcome, {first}. We hope you brought pizza.",
+    "Welcome, {first}. Leave your weapons by the door.",
+    "Swoooosh. {first} just landed.",
+    "Brace yourselves. {first} just joined the chat.",
+    "{first} just joined. Hide your bananas.",
+    "{first} just arrived. Seems OP - please nerf.",
+    "{first} just slid into the chat.",
+    "A {first} has spawned in the chat.",
+    "Big {first} showed up!",
+    "Where’s {first}? In the chat!",
+    "{first} hopped into the chat. Kangaroo!!",
+    "{first} just showed up. Hold my beer.",
+    "Challenger approaching! {first} has appeared!",
+    "It's a bird! It's a plane! Nevermind, it's just {first}.",
+    "It's {first}! Praise the sun! \o/",
+    "Never gonna give {first} up. Never gonna let {first} down.",
+    "Ha! {first} has joined! You activated my trap card!",
+    "Cheers, love! {first}'s here!",
+    "Hey! Listen! {first} has joined!",
+    "We've been expecting you {first}",
+    "It's dangerous to go alone, take {first}!",
+    "{first} has joined the chat! It's super effective!",
+    "Cheers, love! {first} is here!",
+    "{first} is here, as the prophecy foretold.",
+     "Hey, {first}, ever heard the King Engine?",
+    "Hey, {first}, Empty your pockets.",
+    "Hey, {first}!, Are you strong?",
+    "Call the Avengers! - {first} just joined the chat.",
+    "{first} joined. You must construct additional pylons.",
+    "Ermagherd. {first} is here.",
+]
+DEFAULT_GOODBYE_MESSAGES = [
+    "{first} will be missed.",
+    "{first} just went offline.",
+    "{first} has left the lobby.",
+    "{first} has left the clan.",
+    "{first} has left the game.",
+    "{first} has fled the area.",
+    "{first} is out of the running.",
+    "Nice knowing ya, {first}!",
+    "It was a fun time {first}.",
+    "We hope to see you again soon, {first}.",
+    "I donut want to say goodbye, {first}.",
+    "Goodbye {first}! Guess who's gonna miss you :')",
+    "Goodbye {first}! It's gonna be lonely without ya.",
+    "Please don't leave me alone in this place, {first}!",
+    "Good luck finding better shitposters than us, {first}!",
+    "You know we're gonna miss you {first}. Right? Right? Right?",
+    "Congratulations, {first}! You're officially free of this mess.",
+    "{first}. You were an opponent worth fighting.",
+    "You're leaving, {first}? Yare Yare Daze.",
+
 
 
 class Welcome(BASE):
