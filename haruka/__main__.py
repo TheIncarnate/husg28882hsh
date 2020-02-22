@@ -136,10 +136,12 @@ def send_start(bot, update):
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
     text = "Hey there! My name is Lucy - I'm here to help you manage your groups!\n\
-Click Help button to find out more about how to use me to my full potential.\n\n"
+
+    Click Help button to find out more about how to use me to my full potential.\n\n"
 
     text += "Join [Lucy Support Group](https://t.me/LucySupportChat) ( @ItsAviral ) if you need any support or help\n\n\
 Follow [Lucy](https://t.me/LucySupportChat) ( @LucySupportChat ) if you want to keep up with the news, updates and bot downtime!\n\n\
+
 Made with love by @ItsAviral\n\nWant to add me to your group? [Click here!](t.me/Lucy_Robot?startgroup=true)"
 
     keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/LucySupportChat")]]
