@@ -54,7 +54,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
             message.reply_text(tld(chat.id, "No! I'm not muting bot sudoers! That would be a pretty dumb idea."))
 
         elif is_user_admin(chatD, user_id, member=member):
-            message.reply_text(tld(chat.id, "Afraid I can't stop an admin from talking! - Unless i punch them that is"))
+            message.reply_text(tld(chat.id, "Afraid I can't stop an admin from talking! - Unless I ban them that is"))
 
         elif member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chatD.id, user_id, can_send_messages=False)
@@ -69,9 +69,9 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
                                               mention_html(member.user.id, member.user.first_name))
 
         else:
-            message.reply_text(tld(chat.id, "This user is already muted in {}!").format(chatD.title))
+            message.reply_text("This user is already muted!")
     else:
-        message.reply_text(tld(chat.id, "This user isn't in the {}!").format(chatD.title))
+        message.reply_text("This user isn't even here!")
 
     return ""
 
