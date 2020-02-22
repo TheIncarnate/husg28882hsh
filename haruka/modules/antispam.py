@@ -96,7 +96,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
     ok123 = mention_html(user_chat.id, user_chat.first_name)
 
 
-    text12 = f"*⚡️Another Bitch Goes Off⚡️* RIP {ok123}."
+    text12 = f"On it! {ok123}."
     update.effective_message.reply_text(text12, parse_mode=ParseMode.HTML)
 
     banner = update.effective_user  # type: Optional[User]
