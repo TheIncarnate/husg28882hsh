@@ -135,14 +135,14 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = "Hey there! My name is Assassin - I'm here to help you manage your groups!\n\n\
+    text = "Hey there! My name is Lucy - I'm here to help you manage your groups!\n\n\
 I'm built in python3, using the python-telegram-bot library.\n\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
 
-    text += "Join our [Support Group](https://t.me/AssassinBotSupport) if you need any support or help\n\n\
-Made with love by this [Sexy Boi](https://t.me/AmazerS_xD)\n\nWant to add me to your group? [Click here!](t.me/Assassin_ProBot?startgroup=true)"
+    text += "Join our [Support Group](https://t.me/LucySupportChat) if you need any support or help\n\n\
+Made with love by this [Sexy Boi](https://t.me/Itsaviral)\n\nWant to add me to your group? [Click here!](t.me/lucy_robot?startgroup=true)"
 
-    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/AssassinBotSupport"), InlineKeyboardButton(text="MovieStaan💙", url="https://t.me/joinchat/AAAAAEm6UekhiIC2sPHyng")]]
+    keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/LucySupportChat"), InlineKeyboardButton(text="Lucy Updates💙", url="https://t.me/joinchat/AAAAAEaEbH3N2mDu3CA1sA")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
