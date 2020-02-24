@@ -116,7 +116,7 @@ def start(bot: Bot, update: Update, args: List[str]):
 
 
         if is_user_admin(chat, update.effective_user.id):
-                    send_settings(match.group(1), update.effective_user.id, user=False)
+                    send_settings(match.group(1), update.effective_user.id, user=True)
         else:
         	send_settings(match.group(1), update.effective_user.id, user=True)
         
