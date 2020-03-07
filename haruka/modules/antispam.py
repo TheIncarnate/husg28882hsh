@@ -139,7 +139,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
 
 
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gban complete! (User banned in {} chats)".format(gbanned_chats))
-    message.reply_text("Done! This gban affected {} chats".format(gbanned_chats))
+    message.reply_text("Done! This gban affected {} chats!".format(gbanned_chats))
     try:
         bot.send_message(user_id, "You have been globally banned from all groups where I have administrative permissions.", parse_mode=ParseMode.HTML)
     except:
